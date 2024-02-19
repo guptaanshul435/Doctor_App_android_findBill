@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">FindBill</string>
+    <string name="changable">Changable</string>
+    <string name="comname">XYZ health care lt</string>
+    <string name="address">Khandari Marg, Agra</string>
+    <string name="mob">Mobile : xxxxxxxxxx1,xxxxxxxxxx1</string>
+    <string name="password">"password"</string>
+    <string name="username">anshul159104@gmail.com</string>
+    <string-array name="doctor_list">
+        <item>1 Doctor</item>
+        <item>2 Doctor</item>
+        <item>3 Doctor</item>
+        <item>4 Doctor</item>
+        <item>5 Doctor</item>
+        <item>6 Doctor</item>
+        <item>7 Doctor</item>
+    </string-array>
+    <string-array name="payment_list">
+        <item> cash</item>
+        <item> online UPI</item>
+        <item>Net Banking</item>
+        <item>dabit card</item>
+        <item>credit card</item>
+        <item>Other</item>
+    </string-array>
+</resources>

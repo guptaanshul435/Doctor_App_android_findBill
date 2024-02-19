@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Form1Activity"
+    android:background="@drawable/image2">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="vertical"
+        >
+        <RelativeLayout
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <TextView
+                android:layout_marginBottom="40dp"
+                android:id="@+id/comname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="XYZ Health care"
+                android:textSize="30dp"
+                android:textColor="@color/white"
+                android:gravity="center"/>
+
+            <LinearLayout
+                android:id="@+id/firstrow"
+                android:layout_below="@+id/comname"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:text="Doctor"
+                    android:textSize="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"/>
+                <Spinner
+                    android:id="@+id/spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:textColor="@color/white"
+                    android:layout_weight="1"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/secondrow"
+                android:layout_below="@+id/firstrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Patient Mobile"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"
+                    />
+                <EditText
+                    android:id="@+id/mobileno"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:hint="Enter mobile number"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/thirdrow"
+                android:layout_below="@+id/secondrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:textSize="20dp"
+                    android:textColor="@color/white"
+                    android:text="Patient Name"
+                    android:gravity="center"/>
+                <EditText
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white"
+                    android:inputType="text"
+                    android:hint="Enter Name" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/forthrow"
+                android:layout_below="@+id/thirdrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Address"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:id="@+id/address"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Address"
+                    android:inputType="text"
+                    android:textColor="@color/white"
+                    android:autoSizePresetSizes="20"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/fifthrow"
+                android:layout_below="@+id/forthrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Gender"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+                <RadioGroup
+                    android:id="@+id/radiogroup"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="horizontal"
+                    >
+                    <RadioButton
+                        android:id="@+id/gendermale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="Male"
+                        android:textColor="@color/white"
+                        android:autoSizePresetSizes="20"
+                        android:onClick="checkButton"
+                        android:checked="true"
+                        />
+                    <RadioButton
+                        android:id="@+id/genderfemale"
+                        android:layout_width="wrap_content"
+                        android:layout_height="48dp"
+                        android:text="Female"
+                        android:textColor="@color/white"
+                        android:autoSizePresetSizes="20"
+                        android:onClick="checkButton"
+
+                        />
+                </RadioGroup>
+
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sixrow"
+                android:layout_below="@+id/fifthrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Age"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:id="@+id/age"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Age"
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:autoSizePresetSizes="20"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/sevenrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:layout_below="@+id/sixrow">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textSize="20dp"
+                    android:layout_weight="1"
+                    android:text="Fees"
+                    android:gravity="center"
+                    android:textColor="@color/white"
+                    />
+
+                  <EditText
+                      android:layout_width="0dp"
+                      android:layout_height="wrap_content"
+                      android:textSize="20dp"
+                      android:layout_weight="1"
+                      android:inputType="number"
+                      android:hint="Enter Fees"
+                      android:textColor="@color/white"
+                      />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/eightrow"
+                android:layout_below="@+id/sevenrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Descriptiption"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+                <EditText
+                    android:id="@+id/description"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Description"
+                    android:textColor="@color/white"
+                    android:autoSizePresetSizes="20"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ninerow"
+                android:layout_below="@+id/eightrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                android:gravity="center"
+                >
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="Payment"
+                    android:textColor="@color/white"
+                    android:textSize="20dp"/>
+                <Spinner
+                    android:id="@+id/spinner1"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="Enter Address"
+                    android:autoSizePresetSizes="20"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/tenrow"
+                android:layout_marginTop="50dp"
+                android:layout_below="@id/ninerow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+
+                >
+                <Button
+                    android:id="@+id/printrec"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:text="print Receipt"
+                    android:layout_marginLeft="20dp"
+                    android:background="@drawable/button_design"
+                    android:layout_marginRight="20dp"
+                    />
+                <Button
+                    android:id="@+id/emailrec"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:layout_weight="1"
+                    android:text="Email Receipt"
+                    android:background="@drawable/button_design"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_below="@id/tenrow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:weightSum="2"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/whats_app"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/button_design"
+                    android:layout_weight="1"
+                    android:text="Whats App"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+                <Button
+                    android:id="@+id/instagram"
+                    android:layout_marginTop="10dp"
+                    android:layout_width="0dp"
+                    android:layout_height="80dp"
+                    android:background="@drawable/button_design"
+                    android:layout_weight="1"
+                    android:text="Instagram"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+    </ScrollView>
+
+
+
+</RelativeLayout>
